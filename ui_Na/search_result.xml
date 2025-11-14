@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <!-- 검색창 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#EEEEEE"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search"
+                android:layout_marginStart="12dp"/>
+
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="검색"
+                android:textSize="16sp"
+                android:paddingStart="8dp"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/btnClear"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_close"/>
+        </LinearLayout>
+
+
+
+        <!-- 입력한 검색어 표시 -->
+        <TextView
+            android:id="@+id/tvSearchedKeyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색어 표시"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="#DDDDDD"
+            android:layout_marginBottom="16dp" />
+
+
+
+        <!-- 검색 결과 리스트 (오픈API로 동적 추가) -->
+        <LinearLayout
+            android:id="@+id/layoutSearchResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 여기에 결과 아이템이 동적으로 추가됨 -->
+            <!-- 오픈API 응답 반복해서 addView() -->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

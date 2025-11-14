@@ -1,0 +1,184 @@
+<!--제시된 디자인을 따르기 위해 별도의 리소스를 정의하는 것이 좋지만, XML 파일 하나로 완성하기 위해 하드코딩된 스타일을 사용했습니다.--!>
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_person"
+                android:background="@drawable/circle_border"
+                app:tint="@color/gray"
+                android:contentDescription="User Avatar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="성명"
+                    android:layout_marginEnd="16dp"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="이름"
+                    android:textSize="14sp"
+                    android:inputType="textPersonName"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="성별"
+                    android:layout_marginEnd="16dp"/>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="여"
+                        android:checked="true"
+                        android:layout_marginEnd="16dp"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="남"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="생일" android:inputType="date" android:layout_marginBottom="8dp"/>
+            <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="지역 (선택)" android:inputType="textPostalAddress" android:layout_marginBottom="8dp"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="운동 종목 등록" android:layout_marginEnd="16dp"/>
+                <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="선택하기 →" style="?attr/buttonBarButtonStyle" android:textColor="@color/blue"/>
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="개인정보 수집 이용 동의" android:background="@drawable/border_bottom" android:paddingVertical="8dp" android:gravity="center"/>
+            
+            <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="회원 가입" android:layout_marginTop="16dp" android:backgroundTint="@color/dark_gray" android:textColor="@color/white"/>
+        </LinearLayout>
+        
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/light_gray" android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+            
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="자신이 선호하는 운동 성향을 선택해 주세요." android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+            
+            <include layout="@layout/item_vs_selector" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/q1" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <include layout="@layout/item_vs_selector" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/q1" android:id="@+id/q2" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <include layout="@layout/item_vs_selector" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/q2" android:id="@+id/q3" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <include layout="@layout/item_vs_selector" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/q3" android:id="@+id/q4" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <include layout="@layout/item_vs_selector" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/q4" android:id="@+id/q5" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/light_gray" android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+            
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="자전거:" android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/border_all"
+                android:padding="12dp">
+                
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="권한 필수:" android:textStyle="bold" android:layout_marginEnd="16dp"/>
+                <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="동의하기" style="?attr/buttonBarButtonStyle" android:backgroundTint="@color/blue" android:textColor="@color/white" android:paddingVertical="12dp"/>
+                <Button android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="내 기록" style="?attr/buttonBarButtonStyle" android:backgroundTint="@color/dark_gray" android:textColor="@color/white" android:paddingVertical="12dp" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="운동 목표" android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="1. 시간과 순위만 본다." android:layout_marginBottom="4dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2. 칼로리만 본다." android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="유형에 맞춰 목표 설정" android:textColor="@color/blue" android:textStyle="bold" android:layout_marginBottom="16dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="16dp">
+                <View android:layout_width="100dp" android:layout_height="50dp" android:background="@color/light_gray" android:layout_marginEnd="8dp"/>
+                <View android:layout_width="100dp" android:layout_height="50dp" android:background="@color/light_gray" android:layout_marginEnd="8dp"/>
+                <View android:layout_width="100dp" android:layout_height="50dp" android:background="@color/light_gray" android:layout_marginEnd="8dp"/>
+                <View android:layout_width="100dp" android:layout_height="50dp" android:background="@color/light_gray"/>
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="8dp">
+                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="시작 시간"/>
+                <EditText android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="00:00" android:inputType="time" android:gravity="center"/>
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_edit" android:contentDescription="Edit Time"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="종료 시간"/>
+                <EditText android:layout_width="0dp" android:layout_height="wrap_weight" android:layout_weight="1" android:hint="00:00" android:inputType="time" android:gravity="center"/>
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_edit" android:contentDescription="Edit Time"/>
+            </LinearLayout>
+        </LinearLayout>
+        
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/light_gray" android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="자전거: 내 기록" android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2025.11." android:textStyle="bold" android:layout_marginBottom="8dp"/>
+            
+            <include layout="@layout/component_calendar" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="시간: 00:00 ~ 00:00" android:layout_marginTop="16dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="만족도: ☆" android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

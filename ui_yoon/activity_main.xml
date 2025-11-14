@@ -1,4 +1,4 @@
-<!--제시된 디자인을 따르기 위해 별도의 리소스를 정의하는 것이 좋지만, XML 파일 하나로 완성하기 위해 하드코딩된 스타일을 사용했습니다.--!>
+<!--제시된 디자인을 따르기 위해 별도의 리소스를 정의하는 것이 좋지만, XML 파일 하나로 완성하기 위해 하드코딩된 스타일을 사용했습니다.-->
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

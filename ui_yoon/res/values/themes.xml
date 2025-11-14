@@ -1,0 +1,20 @@
+<!--colors와 둘 중 택1-->
+<resources>
+    <style name="CalendarHeader">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+    <style name="CalendarDay" parent="CalendarHeader">
+        <item name="android:textStyle">normal</item>
+        <item name="android:paddingVertical">8dp</item>
+    </style>
+    <style name="CalendarDayHighlighted" parent="CalendarDay">
+        <item name="android:background">@drawable/circle_highlight</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/blue</item>
+    </style>
+</resources>

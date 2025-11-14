@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="4dp">
+
+    <TextView
+        android:id="@+id/tv_option_a"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="승리 차이야"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" (VS) "
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="4dp"/>
+
+    <TextView
+        android:id="@+id/tv_option_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="근육이 있어야 운동이지!"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택"
+        style="?attr/buttonBarButtonStyle"
+        android:backgroundTint="@color/blue"
+        android:textColor="@color/white"
+        android:minWidth="50dp"
+        android:padding="0dp"
+        android:layout_marginStart="8dp"/>
+
+</LinearLayout>

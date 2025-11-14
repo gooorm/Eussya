@@ -11,7 +11,7 @@
 
 
 
-        <!-- 검색창 영역 -->
+        <!-- 🔍 검색창 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -52,7 +52,7 @@
 
 
 
-        <!-- 입력한 검색어 표시 -->
+        <!-- 🔵 내가 입력한 검색어 표시 -->
         <TextView
             android:id="@+id/tvSearchedKeyword"
             android:layout_width="wrap_content"
@@ -66,18 +66,55 @@
 
 
 
-        <!-- 검색 결과 리스트 (오픈API로 동적 추가) -->
+        <!-- 🔥 검색 결과가 붙을 영역 -->
         <LinearLayout
             android:id="@+id/layoutSearchResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- 여기에 결과 아이템이 동적으로 추가됨 -->
-            <!-- 오픈API 응답 반복해서 addView() -->
+            <!-- ⚠️ 여기 안에 동적으로 결과가 여러 개 추가됨 -->
+
+        </LinearLayout>
+
+
+
+
+
+        <!-- 🎯 아래는 “결과 카드 템플릿” (숨겨진 상태) -->
+        <!-- 코틀린에서 clone/inflate해서 layoutSearchResult에 붙이면 됨 -->
+        <LinearLayout
+            android:id="@+id/templateResultItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="#F9F9F9"
+            android:elevation="2dp"
+            android:visibility="gone"     <!-- 🔥 템플릿이므로 화면에서 숨김 -->
+            android:layout_marginBottom="12dp">
+
+            <!-- 제목 -->
+            <TextView
+                android:id="@+id/tvResultTitle_template"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="제목"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
+
+            <!-- 태그 영역 -->
+            <LinearLayout
+                android:id="@+id/layoutTags_template"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 태그들은 Kotlin에서 동적으로 복제해서 붙이는 구조 -->
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
-
 </ScrollView>
